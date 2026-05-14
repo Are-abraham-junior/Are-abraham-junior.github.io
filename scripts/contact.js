@@ -52,11 +52,14 @@ async function submitContact(e) {
   if (status) status.textContent = "Envoi...";
 
   try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
-    });
+    const res = await fetch(
+      `${window.APP_CONFIG?.API_BASE || ""}/api/contact`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      },
+    );
 
     const json = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(json?.message || `Erreur ${res.status}`);

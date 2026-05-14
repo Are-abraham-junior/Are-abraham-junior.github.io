@@ -57,7 +57,7 @@ async function loadBlogPosts() {
   loading.textContent = "Chargement...";
   list.appendChild(loading);
 
-  const res = await fetch(`${location.origin}/api/posts`);
+  const res = await fetch(`${window.APP_CONFIG?.API_BASE || ""}/api/posts`);
   const json = await res.json();
   const posts = json.posts || [];
 

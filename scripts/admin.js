@@ -49,10 +49,7 @@ function show(el, visible) {
   el.style.display = visible ? "" : "none";
 }
 
-const API_BASE =
-  location.origin.includes(":5500") || location.origin === "null"
-    ? "http://localhost:3000"
-    : location.origin;
+const API_BASE = window.APP_CONFIG?.API_BASE || "http://localhost:3000";
 
 async function api(path, { method = "GET", token, body, headers } = {}) {
   // Appel de l’API du backend. Si la page est servie par Live Server (127.0.0.1:5500),
