@@ -41,7 +41,7 @@ function renderPost(post) {
       </div>
       ${excerpt ? `<div class="blog-post__excerpt">${excerpt}</div>` : ""}
       ${renderMedia(post)}
-      <div class="blog-post__content">${content}</div>
+      <div class="blog-post__content">${content.length > 220 ? content.slice(0, 220) + "…" : content}</div>
     </article>
   `;
 }
