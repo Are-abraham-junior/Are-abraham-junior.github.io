@@ -1,0 +1,21 @@
+.admin-password-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-password-wrap input[data-admin-password] {
+  flex: 1;
+}
+
+.admin-eye-toggle {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(38, 29, 27, 0.12);
+  background: #f9f4ef;
+  border-radius: 18px;
+}

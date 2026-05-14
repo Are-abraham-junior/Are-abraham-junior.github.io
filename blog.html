@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Audrey Éditions</title>
+    <link rel="icon" type="image/png" href="images/livres/logo-audrey.png" />
+    <link rel="apple-touch-icon" href="images/livres/logo-audrey.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/admin.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="site-shell header-inner">
+        <h1 class="site-title">Audrey Humbert – Heritage & History</h1>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="atelier.html">Atelier</a>
+          <a href="editions.html">Éditions</a>
+          <a class="active" href="blog.html">Blog</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          data-mobile-toggle
+          aria-label="Ouvrir le menu"
+        >
+          Menu
+        </button>
+      </div>
+    </header>
+
+    <div class="site-shell">
+      <div class="mobile-nav" data-mobile-nav aria-hidden="true">
+        <button
+          class="mobile-nav-close"
+          data-mobile-close
+          aria-label="Fermer le menu"
+        >
+          Fermer
+        </button>
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="atelier.html">Atelier</a>
+        <a href="editions.html">Éditions</a>
+        <a href="blog.html">Blog</a>
+      </div>
+
+      <section class="page-header">
+        <h2 class="section-title">Blog et actualités</h2>
+        <p class="section-text">
+          Inspiration, projets récents et réflexions autour du livre, de la
+          création et de l’édition indépendante.
+        </p>
+      </section>
+
+      <section class="section section-alt">
+        <div class="site-shell">
+          <div class="grid-2">
+            <article class="card">
+              <div class="card-content">
+                <h3>Créer une couverture marquante</h3>
+                <p>
+                  Les principes de composition, de typographie et de symbole
+                  pour un design séduisant.
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-content">
+                <h3>Le format papier aujourd’hui</h3>
+                <p>
+                  Pourquoi le livre imprimé reste un objet précieux, même à
+                  l’ère du numérique.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell">
+          <h3 class="section-title">Articles publiés</h3>
+          <p class="section-text" style="margin-bottom: 28px">
+            Les publications apparaissent ici après publication par l’admin.
+          </p>
+          <div class="blog-posts" data-blog-posts-list></div>
+        </div>
+      </section>
+
+      <section class="admin-admin-area">
+        <div class="site-shell">
+          <div class="admin-grid">
+            <div class="admin-panel" data-admin-login-panel>
+              <h2>Connexion admin</h2>
+              <form data-admin-login-form>
+                <div class="admin-row">
+                  <div class="admin-field">
+                    <label for="admin-email">Email</label>
+                    <input
+                      id="admin-email"
+                      type="email"
+                      required
+                      data-admin-email
+                      autocomplete="username"
+                    />
+                  </div>
+                  <div class="admin-field">
+                    <label for="admin-password">Mot de passe</label>
+                    <div class="admin-password-wrap">
+                      <input
+                        id="admin-password"
+                        type="password"
+                        required
+                        data-admin-password
+                        autocomplete="current-password"
+                      />
+                      <button
+                        type="button"
+                        class="admin-eye-toggle"
+                        data-admin-toggle-password
+                        aria-label="Afficher le mot de passe"
+                        title="Afficher/masquer"
+                      >
+                        👁
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="admin-actions">
+                  <button class="admin-primary" type="submit">
+                    Se connecter
+                  </button>
+                  <span class="admin-message" data-admin-login-error></span>
+                </div>
+              </form>
+
+              <p class="section-text" style="margin-top: 18px">
+                Démo : les identifiants sont configurés côté serveur.
+              </p>
+            </div>
+
+            <div
+              class="admin-panel"
+              data-admin-composer-panel
+              style="display: none"
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  gap: 16px;
+                  align-items: center;
+                  flex-wrap: wrap;
+                "
+              >
+                <h2>Dashboard – Publication</h2>
+                <button type="button" class="btn-secondary" data-admin-logout>
+                  Déconnexion
+                </button>
+              </div>
+
+              <form data-admin-post-form>
+                <input type="hidden" data-admin-post-id />
+
+                <div class="admin-row">
+                  <div class="admin-field">
+                    <label for="post-title">Titre</label>
+                    <input
+                      id="post-title"
+                      required
+                      type="text"
+                      data-admin-title
+                    />
+                  </div>
+                  <div class="admin-field">
+                    <label for="post-type">Type</label>
+                    <select id="post-type" data-admin-type>
+                      <option value="text">Texte</option>
+                      <option value="image">Image</option>
+                      <option value="video">Vidéo</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="admin-field" style="margin-top: 16px">
+                  <label for="post-excerpt">Résumé (optionnel)</label>
+                  <input id="post-excerpt" type="text" data-admin-excerpt />
+                </div>
+
+                <div class="admin-field" style="margin-top: 16px">
+                  <label for="post-content">Contenu</label>
+                  <textarea
+                    id="post-content"
+                    required
+                    data-admin-content
+                  ></textarea>
+                </div>
+
+                <div class="admin-row" style="margin-top: 16px">
+                  <div class="admin-field">
+                    <label for="media-file">Media (upload optionnel)</label>
+                    <input
+                      id="media-file"
+                      type="file"
+                      accept="image/*,video/*"
+                      data-admin-media-file
+                    />
+                  </div>
+                  <div class="admin-field">
+                    <label for="media-url">Ou URL du media (optionnel)</label>
+                    <input
+                      id="media-url"
+                      type="url"
+                      placeholder="https://..."
+                      data-admin-media-url
+                    />
+                  </div>
+                </div>
+
+                <div class="admin-actions">
+                  <button type="submit" class="admin-primary" data-admin-submit>
+                    Publier
+                  </button>
+                  <span class="admin-message" data-admin-form-message></span>
+                </div>
+              </form>
+
+              <div style="height: 24px"></div>
+
+              <div>
+                <h3
+                  class="section-title"
+                  style="margin-bottom: 12px; font-size: 1.6rem"
+                >
+                  Posts
+                </h3>
+                <div class="admin-posts" data-admin-posts-list></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <p>Disponible sur rendez-vous, heures flexibles</p>
+          <p>Basée entre Paris, Lyon et Genève</p>
+          <p>+41 79 967 59 70 | +33 6 13 63 49 46 · ahumbert.w@gmail.com</p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/audreyhumbert"
+              aria-label="Facebook"
+            >
+              <img
+                src="images/social/facebook.png"
+                alt=""
+                width="18"
+                height="18"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/audreyhumbert"
+              aria-label="Instagram"
+            >
+              <img
+                src="images/social/instagram.png"
+                alt=""
+                width="18"
+                height="18"
+              />
+            </a>
+            <a href="https://twitter.com/audreyhumbert" aria-label="Twitter">
+              <img
+                src="images/social/twitter.png"
+                alt=""
+                width="18"
+                height="18"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cookies" data-cookie-banner>
+      <p>
+        Ce site utilise des cookies pour améliorer votre expérience. En
+        poursuivant, vous acceptez.
+      </p>
+      <button data-cookie-accept>J’accepte</button>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/admin.js"></script>
+  </body>
+</html>

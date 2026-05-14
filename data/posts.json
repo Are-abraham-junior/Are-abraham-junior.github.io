@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "ac4e9e84-a34d-4bd4-9c79-f5906fb43f28",
+      "title": "La maison de l'or",
+      "excerpt": "Rien n'est pécieux qu'une vieille horloge!",
+      "type": "text",
+      "content": "J vis que pour les nouvelle montre.",
+      "media": {
+        "kind": "image",
+        "url": "/uploads/3ca38eeab542c921e7940f282376d334.png",
+        "originalName": "Gemini_Generated_Image_srvghssrvghssrvg.png",
+        "mimeType": "image/png"
+      },
+      "status": "published",
+      "createdAt": "2026-05-13T23:43:25.178Z"
+    },
+    {
+      "id": "5693c4f6-b4dc-42a6-b2af-93e51466c891",
+      "title": "Bonjour",
+      "excerpt": "SALUT",
+      "type": "text",
+      "content": "Tout le monde",
+      "media": null,
+      "status": "published",
+      "createdAt": "2026-05-14T00:32:05.690Z"
+    }
+  ]
+}
