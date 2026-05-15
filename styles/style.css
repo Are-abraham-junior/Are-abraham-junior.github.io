@@ -15,6 +15,9 @@
   --button-hover: rgba(38, 29, 27, 0.12);
   --link: #26201c;
   --radius: 24px;
+  --radius-premium: 6px;
+  --radius-premium-lg: 8px;
+
   --max-width: 1200px;
 }
 
@@ -112,6 +115,18 @@ button {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   opacity: 0.85;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.site-brand img {
+  display: block;
+  width: auto;
+  height: 48px;
 }
 
 .site-nav {
@@ -256,8 +271,9 @@ button {
 .card {
   background: #ffffff;
   border: 1px solid rgba(38, 29, 27, 0.08);
-  border-radius: 28px;
+  border-radius: var(--radius-premium);
   overflow: hidden;
+
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
   opacity: 0;
   transform: translateY(20px);
@@ -326,8 +342,9 @@ button {
   padding: 36px;
   background: #ffffff;
   border: 1px solid rgba(38, 29, 27, 0.08);
-  border-radius: 28px;
+  border-radius: var(--radius-premium);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
+
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.9s ease forwards;
@@ -362,7 +379,7 @@ button {
   align-items: start;
   background: #ffffff;
   border: 1px solid rgba(38, 29, 27, 0.08);
-  border-radius: 28px;
+  border-radius: var(--radius-premium);
   padding: 36px;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.08);
 }
@@ -517,8 +534,8 @@ button {
 .admin-panel {
   background: #ffffff;
   border: 1px solid rgba(38, 29, 27, 0.08);
-  border-radius: 28px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-premium);
+  box-shadow: 0 24px 60px rgba(0, 24px 60px rgba(0, 0, 0, 0.06));
   padding: 28px;
 }
 
@@ -612,7 +629,7 @@ button {
 
 .admin-post-item {
   border: 1px solid rgba(38, 29, 27, 0.08);
-  border-radius: 24px;
+  border-radius: var(--radius-premium);
   padding: 18px;
   background: #ffffff;
 }

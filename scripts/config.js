@@ -9,6 +9,5 @@
 
 window.APP_CONFIG = window.APP_CONFIG || {};
 
-window.APP_CONFIG.API_BASE = window.APP_CONFIG.API_BASE || "https://audrey-site-ho8h.onrender.com";
-
-
+// Utilise l’API locale par défaut lorsque le site est servi depuis le même domaine.
+window.APP_CONFIG.API_BASE = window.APP_CONFIG.API_BASE || "";
